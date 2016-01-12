@@ -1,0 +1,123 @@
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/* TRANSITIONS */
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+
+/* ANIMATIONS */
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+@mixin animation-name($str){
+  -webkit-animation-name: #{$str};
+  -moz-animation-name: #{$str};
+  -ms-animation-name: #{$str};
+  -o-animation-name: #{$str};
+  animation-name: #{$str};
+}
+@mixin animation-iteration-count($str){
+  -webkit-animation-iteration-count: #{$str};
+  -moz-animation-iteration-count: #{$str};
+  -ms-animation-iteration-count: #{$str};
+  -o-animation-iteration-count: #{$str};
+  animation-iteration-count: #{$str};
+}
+@mixin animation-timing-function($str){
+  -webkit-animation-timing-function: #{$str};
+  -moz-animation-timing-function: #{$str};
+  -ms-animation-timing-function: #{$str};
+  -o-animation-timing-function: #{$str};
+  animation-timing-function: #{$str};
+}
+@mixin animation-play-state($str){
+  -webkit-animation-play-state: #{$str};
+  -moz-animation-play-state: #{$str};
+  -ms-animation-play-state: #{$str};
+  -o-animation-play-state: #{$str};
+  animation-play-state: #{$str};
+}
+@mixin animation-duration($str){
+  -webkit-animation-duration: #{$str};
+  -moz-animation-duration: #{$str};
+  -ms-animation-duration: #{$str};
+  -o-animation-duration: #{$str};
+  animation-duration: #{$str};
+}
+
+
+
+
+
+@mixin bp-small {
+  @media all and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media all and (min-width: 701px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+/* no max width because x-large is not always available */
+@mixin bp-large {
+  @media all and (min-width: 1401px){
+    @content;
+  }
+}
+
+@mixin bp-xlarge {
+  @media all and (min-width: 1801px){
+    @content;
+  }
+}
+
+
+
+@mixin box-sizing ($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  -ms-box-sizing: $type;
+  -o-box-sizing: $type;
+  box-sizing: $type;
+}
+

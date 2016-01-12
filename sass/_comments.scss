@@ -1,0 +1,32 @@
+#comments {
+  display: none;
+  background: rgba(255,255,255,.98);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 100;
+  color: #666;
+
+  h3 {
+    text-align: center;
+    margin-left: 52px;
+    margin-right: 52px;
+  }
+
+  .comment-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+
+.showmodal2 {
+  #comments {
+    display: block;
+  }
+}
